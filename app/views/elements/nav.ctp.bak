@@ -1,0 +1,34 @@
+<div id="nav_wrap">
+  <ul id="main">
+  <!--  <li><a href="">Menu </a> </li> -->
+    <li><a href="">Profile </a> </li>
+    <li><a href="">Cities </a> </li>
+    <li><a class="current" href="">Countries </a> </li>
+    <li><a href="">Members </a> </li>
+  <!--
+    <li><a href="">Map </a> </li>
+    <li><a href="">Search </a> </li>
+    <li><a href="">Messages </a> </li>
+    <li><a href="">Forum </a> </li>
+    <li><a href="">Groups </a> </li>
+    <li><a href="">Chat </a> </li>
+    <li><a href="">Help us!</a> </li>
+    <li><a href="12/">Link A</a> </li>
+    <li>
+      <ul>
+        <li>
+          <a href="12/fluid/mootools/">Drop 1</a>
+        </li>
+        <li>
+          <a href="12/fluid/jquery/">Drop 2</a>
+        </li>
+        <li>
+          <a href="12/fluid/none/">Drop 3</a>
+        </li>
+      </ul>
+    </li> -->
+  </ul>
+</div>
+<!-- separator -->
+<div class="grid_16">&nbsp;</div>
+<div class="clear"></div>

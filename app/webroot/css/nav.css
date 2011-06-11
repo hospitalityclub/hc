@@ -1,0 +1,62 @@
+/*
+ * A very simple cross-browser navigation
+ * using <div> tags instead of <ul>/<li>
+ *
+ * Tested in IE7, FF3+, Safari & Chrome
+ * by amonaco@gmail.com
+ */
+
+.nav_left {
+  background: #3A7FD2;
+  float: left;
+  padding-bottom: 2px; 
+  border-top: 3px solid #eee;
+  height: 21px;
+  width: 190px;
+  margin-left: 9px;
+}
+.nav_right {
+  background: #3A7FD2;
+  float: left;
+  padding-bottom: 2px; 
+  border-top: 3px solid #eee;
+  height: 21px;
+  width: 550px;
+}
+
+.nav_item {
+  margin-left: 0px;
+  background: #75A6E0;
+  float: left;
+  padding: 3px 24px 2px 8px;
+  border-top: 3px solid #eee;
+}
+
+.nav_item:hover {
+  background: #3A7FD2;
+  border-top: 3px solid #ddd;
+}
+
+.nav_item a{
+  color: #fff;
+  font-size: 110%;
+}
+
+.nav_select {
+  background: #fff !important;
+  color: #333 !important;
+  margin-left: 0px;
+  float: left;
+  padding-left: 8px; 
+  padding: 3px 24px 2px 8px;
+  border-top: 3px solid #FCDA76;
+}
+
+.nav_select a{
+  color: #333;
+  font-size: 110%;
+}
+
+#nav_wrap {
+  background: #3A7FD2;
+}
