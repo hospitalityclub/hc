@@ -33,4 +33,8 @@
  * @link http://book.cakephp.org/view/957/The-App-Controller
  */
 class AppController extends Controller {
+  var $components = array('Auth', 'Session');
+  function beforeRender() {
+    $this->set('auth', $this->Auth->user());
+  }
 }

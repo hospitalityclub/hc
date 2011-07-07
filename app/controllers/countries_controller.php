@@ -1,6 +1,9 @@
 <?php
 class CountriesController extends AppController {
+
   var $name = 'Countries';
+  var $components = array('Auth', 'Session');
+
   var $paginate = array(
       'limit' => 2000,
       'order' => array(

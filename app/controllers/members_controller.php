@@ -2,8 +2,9 @@
 class MembersController extends AppController {
 
 	var $name = 'Members';
-  // move to app controller
-  var $components = array('Auth', 'Session');
+  // move to app controller?
+  // var $components = array('Auth', 'Session');
+
 
 
 
@@ -20,26 +21,6 @@ class MembersController extends AppController {
 
   function login() {
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
