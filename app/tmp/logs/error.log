@@ -1,0 +1,2 @@
+2011-06-29 19:45:32 Warning: Warning (2): array_chunk() expects parameter 1 to be array, null given in [/var/www/hc3/app/views/countries/show.ctp, line 8]
+2011-06-29 19:45:32 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/hc3/app/views/countries/show.ctp, line 8]

@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="/hc3/css/nav.css" media="screen" />
   <!--[if IE 6]><link rel="stylesheet" type="text/css" href="/hc3/css/ie6.css" media="screen" /><![endif]-->
   <!--[if IE 7]><link rel="stylesheet" type="text/css" href="/hc3/css/ie.css" media="screen" /><![endif]-->
+  <link  href="http://fonts.googleapis.com/css?family=Shadows+Into+Light:regular&v1" rel="stylesheet" type="text/css" >
   <?php // echo $scripts_for_layout; ?>
   <title>
     <?php __('Hospitality Club (Development)'); ?> -

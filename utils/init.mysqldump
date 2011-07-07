@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: devel
 -- ------------------------------------------------------
--- Server version	5.0.32-Debian_7etch12-log
+-- Server version	5.0.51a-24+lenny5
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -20,6 +20,8 @@
 --
 
 DROP TABLE IF EXISTS `members`;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
 CREATE TABLE `members` (
   `id` int(11) unsigned NOT NULL auto_increment,
   `country_id` int(2) unsigned NOT NULL default '0',
@@ -177,6 +179,7 @@ CREATE TABLE `members` (
   FULLTEXT KEY `occupation_fulltext` (`occupation`),
   FULLTEXT KEY `chat_SKYPE_fulltext` (`chat_skype`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+SET character_set_client = @saved_cs_client;
 
 --
 -- Dumping data for table `members`
@@ -196,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-06-11 17:57:42
+-- Dump completed on 2011-06-11 20:32:00
