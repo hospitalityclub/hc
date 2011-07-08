@@ -1,4 +1,3 @@
-You are logged in as <?php echo $auth['Member']['username']; ?> <a href="/hc3/members/logout/"> Logout? </a>
 <div class="grid_16">
   <?php echo $this->element('nav'); ?>
 </div>

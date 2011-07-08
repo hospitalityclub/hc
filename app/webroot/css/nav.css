@@ -13,16 +13,22 @@
   border-top: 3px solid #eee;
   height: 21px;
   width: 17%;;
-  margin-left: 9px;
 }
 .nav_right {
   background: #3A7FD2;
+  color: #fff;
+  font-size: 110%;
+  text-align: right;
+  padding: 3px 24px 2px 8px;
   float: left;
-  padding-bottom: 2px; 
+  /* padding-bottom: 2px; not needed anymore since text added */
   border-top: 3px solid #eee;
-  height: 21px;
   width: 43%;
 }
+
+/* fix for logout link */
+.nav_right a { color: #fff; font-weight: bold; }
+.nav_right a:visited { color: #fff; font-weight: bold; }
 
 .nav_item {
   margin-left: 0px;

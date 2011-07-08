@@ -8,7 +8,9 @@
   <div class="nav_item"><a href="/hc3/profile/">Map</a></div>
   <div class="nav_item"><a href="/hc3/profile/">Search</a></div>
   <div class="nav_item"><a href="/hc3/profile/">Profile</a></div>
-  <div class="nav_right">&nbsp;</div>
+  <div class="nav_item"><a href="/hc3/profile/">Settings</a></div>
+  <div class="nav_right">You are logged in as <?php echo $auth['Member']['username']; ?> <a href="/hc3/members/logout/"> Logout? </a>
+</div>
 </div>
 <div class="clear"></div>
 <br />
