@@ -2,12 +2,8 @@
 class MembersController extends AppController {
 
 	var $name = 'Members';
-  // move to app controller?
-  // var $components = array('Auth', 'Session');
 
-
-
-
+  // auth settings, this controller is used for auth
   function beforeFilter() {
     $this->Auth->fields = array(
       'username' => 'username',
@@ -15,33 +11,30 @@ class MembersController extends AppController {
     );
   }
 
+  // user logs out, this kills the session
   function logout() {
     $this->redirect($this->Auth->logout());
   }
 
+  // keep this action empty, this is used for auth
   function login() {
   }
 
-
-
-
-
-
-  // scaffold to be removed
-
+  // this action should never be reached
 	function index() {
-		$this->Member->recursive = 0;
-		$this->set('members', $this->paginate());
 	}
 
+  // this should be modified to be profile show
 	function view($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid member', true));
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->set('member', $this->Member->read(null, $id));
+		// $this->set('member', $this->Member->read(null, $id));
+    $this->set('member', $this->Member->findByUsername($id));
 	}
 
+  // this should be removed
 	function add() {
 		if (!empty($this->data)) {
 			$this->Member->create();
@@ -54,6 +47,7 @@ class MembersController extends AppController {
 		}
 	}
 
+  // should be modified to edit profile
 	function edit($id = null) {
 		if (!$id && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid member', true));
@@ -68,21 +62,9 @@ class MembersController extends AppController {
 			}
 		}
 		if (empty($this->data)) {
-			$this->data = $this->Member->read(null, $id);
+			// $this->data = $this->Member->read(null, $id);
+      $this->data = $this->Member->findByUsername($id);
 		}
-	}
-
-	function delete($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(__('Invalid id for member', true));
-			$this->redirect(array('action'=>'index'));
-		}
-		if ($this->Member->delete($id)) {
-			$this->Session->setFlash(__('Member deleted', true));
-			$this->redirect(array('action'=>'index'));
-		}
-		$this->Session->setFlash(__('Member was not deleted', true));
-		$this->redirect(array('action' => 'index'));
 	}
 }
 ?>
