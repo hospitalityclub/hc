@@ -224,8 +224,11 @@ values
 '{$row['nbofemailreceivedsincelastlog']}',
 '{$row['toberemind']}',
 '{$row['attractions_updated']}',
-now(),
+'{$row['created']}',
 now());\n";
+
+
+// careful with created, that fields represents "member since"
 
 
   $res1 = mysql_query($sql, $db);

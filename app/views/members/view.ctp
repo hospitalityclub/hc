@@ -13,8 +13,81 @@
   &gt; <?php echo $member['City']['name']; ?>
   &gt; <?php echo $member['Member']['username']; ?>
 </h4>
+<h5>Profile</h5>
+<div style="float: left; width: 65%">
+<table>
+  <tr>
+    <td>Name:</td>
+    <td><?php echo $member['Member']['name']; ?></td>
+  </tr><tr>
+    <td>Street:</td>
+    <td><?php echo $member['Member']['street']; ?></td>
+  </tr><tr>
+    <td>City:</td>
+    <td><?php echo $member['City']['name']; ?></td>
+  </tr><tr>
+    <td>Region:</td>
+    <td><?php echo $member['Member']['region']; ?></td>
+  </tr><tr>
+    <td>Country:</td>
+    <td><?php echo $member['Country']['name']; ?></td>
+  </tr><tr>
+    <td>Homepage:</td>
+    <td><?php echo $member['Member']['homepage']; ?></td>
+  </tr><tr>
+    <!-- gets too complex, take this to an element -->
+    <td>Phone:</td>
+    <td><?php echo $member['Member']['homephone']; ?> (home) <?php echo $member['Member']['workphone']; ?> (work)</td>
+  </tr><tr>
+    <!-- gets too complex, take this to an element -->
+    <td>Instant Contact:</td>
+    <td>MSN: <?php echo $member['Member']['chat_msn']; ?>
+			ICQ: <?php echo $member['Member']['chat_icq']; ?>
+			Yahoo: <?php echo $member['Member']['chat_yahoo']; ?>
+			Skype:<?php echo $member['Member']['chat_skype']; ?>
+			AOL: <?php echo $member['Member']['chat_aol']; ?>
+			Other: <?php echo $member['Member']['chat_others']; ?></td>
+  </tr><tr>
+    <td>Date of Birth:</td>
+    <td><?php echo $member['Member']['birthday']; ?></td>
+  </tr><tr>
+    <td>Occupation:</td>
+    <td><?php echo $member['Member']['occupation']; ?></td>
+  </tr><tr>
+    <td>Member Since:</td>
+    <td><?php echo $member['Member']['created']; ?></td>
+  </tr><tr>
+    <td>Last Login:</td>
+    <td><?php echo $member['Member']['lastlogin']; ?></td>
+  </tr><tr>
+    <!-- probably needs to be renamed and migrated-->
+    <td>Profile Summary:</td>
+    <td><?php echo stripslashes($member['Member']['othcom']); ?></td>
+  </tr><tr>
+  </tr>
+</table>
+</div>
+<div style="padding: 2px; float: left; border: solid 1px #eee">
+<img src="/hc3/img/a/ar/arielmonaco/profile.jpg" />
+</div>
+<div class="clear"> </div>
+<h5>Secondary Contact:</h5>
+<table>
+  <tr>
+    <td>Street, City:</td>
+    <td><?php echo $member['Member']['secstreet']; ?></td>
+    <td><?php echo $member['Member']['seccity']; ?></td>
+  </tr><tr>
+    <td>State, ZIP:</td>
+    <td><?php echo $member['Member']['secregion']; ?></td>
+    <td><?php echo $member['Member']['zip']; ?></td>
+  </tr><tr>
+    <td>Country, Phone:</td>
+    <td><?php echo $member['SecCountry']['name']; ?></td>
+    <td><?php echo $member['Member']['secphone']; ?></td>
+  </tr>
+</table>
 
-Name: <?php echo $member['Member']['name']; ?>, 
 
 
 
@@ -101,7 +174,6 @@ Name: <?php echo $member['Member']['name']; ?>,
 			<?php echo $member['Member']['level']; ?>
 			<?php echo $member['Member']['hcnotes']; ?>
 			<?php echo $member['Member']['name']; ?>
-			<?php echo $member['Member']['street']; ?>
 			<?php echo $member['Member']['email']; ?>
 			<?php echo $member['Member']['password']; ?>
 			<?php echo $member['Member']['secemail']; ?>
@@ -118,12 +190,6 @@ Name: <?php echo $member['Member']['name']; ?>,
 			<?php echo $member['Member']['lastaccess']; ?>
 			<?php echo $member['Member']['latitude']; ?>
 			<?php echo $member['Member']['longitude']; ?>
-			<?php echo $member['Member']['chat_msn']; ?>
-			<?php echo $member['Member']['chat_icq']; ?>
-			<?php echo $member['Member']['chat_yahoo']; ?>
-			<?php echo $member['Member']['chat_skype']; ?>
-			<?php echo $member['Member']['chat_others']; ?>
-			<?php echo $member['Member']['chat_aol']; ?>
 			<?php echo $member['Member']['nbhost']; ?>
 			<?php echo $member['Member']['nbguest']; ?>
 			<?php echo $member['Member']['nbcomment']; ?>
