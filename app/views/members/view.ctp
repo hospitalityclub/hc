@@ -47,11 +47,11 @@ Name: <?php echo $member['Member']['name']; ?>,
 			<?php echo $member['Member']['secphone']; ?>
 			<?php echo $member['Member']['secinfo']; ?>
 			<?php echo $member['Member']['languages']; ?>
-			<?php echo $member['Member']['hobbies']; ?>
+			<?php echo stripslashes($member['Member']['hobbies']); ?>
 			<?php echo $member['Member']['organizations']; ?>
 			<?php echo $member['Member']['travels']; ?>
 			<?php echo $member['Member']['plans']; ?>
-			<?php echo $member['Member']['aboutmyself']; ?>
+			<?php echo stripslashes($member['Member']['aboutmyself']); ?>
 			<?php echo $member['Member']['accom']; ?>
 			<?php echo $member['Member']['offershow']; ?>
 			<?php echo $member['Member']['offerdinner']; ?>
@@ -92,7 +92,7 @@ Name: <?php echo $member['Member']['name']; ?>,
 			<?php echo $member['Member']['dodishes']; ?>
 			<?php echo $member['Member']['restriother']; ?>
 			<?php echo $member['Member']['pets']; ?>
-			<?php echo $member['Member']['othcom']; ?>
+			<?php echo stripslashes($member['Member']['othcom']); ?>
 			<?php echo $member['Member']['feedback']; ?>
 			<?php echo $member['Member']['terms']; ?>
 			<?php echo $member['Member']['category']; ?>
