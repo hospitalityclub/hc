@@ -34,36 +34,24 @@ class MembersController extends AppController {
     $this->set('member', $this->Member->findByUsername($id));
 	}
 
-  // this should be removed
-	function add() {
-		if (!empty($this->data)) {
-			$this->Member->create();
-			if ($this->Member->save($this->data)) {
-				$this->Session->setFlash(__('The member has been saved', true));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The member could not be saved. Please, try again.', true));
-			}
-		}
-	}
-
   // should be modified to edit profile
-	function edit($id = null) {
-		if (!$id && empty($this->data)) {
+	function edit($username = null) {
+		if (!$username && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid member', true));
-			$this->redirect(array('action' => 'index'));
+      // what do we do here?
+			//$this->redirect(array('action' => 'index'));
 		}
 		if (!empty($this->data)) {
 			if ($this->Member->save($this->data)) {
 				$this->Session->setFlash(__('The member has been saved', true));
-				$this->redirect(array('action' => 'index'));
+				// this is a fix only, cake keeps redirecting to /edit/$id
+        $this->redirect($this->referer());
 			} else {
 				$this->Session->setFlash(__('The member could not be saved. Please, try again.', true));
 			}
 		}
 		if (empty($this->data)) {
-			// $this->data = $this->Member->read(null, $id);
-      $this->data = $this->Member->findByUsername($id);
+      $this->data = $this->Member->findByUsername($username);
 		}
 	}
 }

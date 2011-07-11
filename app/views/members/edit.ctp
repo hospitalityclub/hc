@@ -13,7 +13,7 @@
 		echo $this->Form->input('city_volunteer');
 		echo $this->Form->input('region_volunteer');
 		echo $this->Form->input('country_volunteer');
-		echo $this->Form->input('bday');
+		echo $this->Form->input('birthday');
 		echo $this->Form->input('homepage');
 		echo $this->Form->input('photo');
 		echo $this->Form->input('homephone');
@@ -127,12 +127,4 @@
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Submit', true));?>
-</div>
-<div class="actions">
-	<h3><?php __('Actions'); ?></h3>
-	<ul>
-
-		<li><?php echo $this->Html->link(__('Delete', true), array('action' => 'delete', $this->Form->value('Member.id')), null, sprintf(__('Are you sure you want to delete # %s?', true), $this->Form->value('Member.id'))); ?></li>
-		<li><?php echo $this->Html->link(__('List Members', true), array('action' => 'index'));?></li>
-	</ul>
 </div>
