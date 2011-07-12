@@ -87,17 +87,74 @@
     <td><?php echo $member['Member']['secphone']; ?></td>
   </tr>
 </table>
+<h5>Travel and Interests:</h5>
+<table>
+  <tr>
+    <!-- we might have to create a languages table
+    profiles should be able to be searchable. for
+    example, someone who only speaks spanish wants
+    to visit japan, and needs a spanish-speaking
+    japanese host -->
+    <td>Spoken Languages:</td>
+    <td><?php echo stripslashes($member['Member']['languages']); ?></td>
+  </tr><tr>
+    <td>Hobbies:</td>
+    <td><?php echo stripslashes($member['Member']['hobbies']); ?></td>
+  </tr><tr>
+    <td>Organizations I'm a member of:</td>
+    <td><?php echo stripslashes($member['Member']['organizations']); ?></td>
+  </tr>
+    <!-- this might change to a "travel experience and
+    planning"-like feature. where the user provides
+    ranges of times and other data. -->
+    <td>Travel Experience:</td>
+    <td><?php echo stripslashes($member['Member']['travels']); ?></td>
+  </tr>
+    <td>Planned Trips:</td>
+    <td><?php echo stripslashes($member['Member']['plans']); ?></td>
+  </tr>
+    <!-- we need to think if this shouldn't be merged
+    with othcom, or similar fields. does it really makes
+    sense here. or maybe the name isn't appropiate :\ -->
+    <td>Anything else about myself::</td>
+    <td><?php echo stripslashes($member['Member']['aboutmyself']); ?></td>
+  </tr>
+</table>
+
+<h5>Help and Advice:</h5>
+<table>
+  <tr>
+    <td>I can offer:</td>
+    <td><?php echo stripslashes($member['Member']['accom']); ?>
+    <!-- make a cakephp element out of this to translate
+    the integer values to text strings -->
+      <?php echo $member['Member']['offershow']; ?>
+      <?php echo $member['Member']['offerdinner']; ?>
+      <?php echo $member['Member']['offerother']; ?> </td>
+  </tr><tr>
+    <td>Best times to help:</td>
+    <td><?php echo stripslashes($member['Member']['besttimes']); ?> </td>
+  </tr><tr>
+    <td>Nearby public transport:</td>
+    <td><?php echo stripslashes($member['Member']['publictrans']); ?> </td>
+  </tr><tr>
+    <td>Nearby biggest cities:</td>
+    <td><?php echo stripslashes($member['Member']['bigcities']); ?> </td>
+  </tr><tr>
+    <!-- check way to generate "also add to travel guide" or use
+    wikitravel for this, for me (amonaco) lists almagro instead of
+    buenos aires, hmm... :\ -->
+    <td style="width: 20%">Interesting things to see and do where I live, my tips (also add... :</td>
+    <td><?php echo stripslashes($member['Member']['attractions']); ?> </td>
+  </tr>
+</table>
 
 
 
 
 
 
-			<?php echo $member['Member']['id']; ?>
-			<?php echo $member['Member']['country_id']; ?>
-			<?php echo $member['Member']['city_id']; ?>
-			<?php echo $member['Member']['region']; ?>
-			<?php echo $member['Member']['zip']; ?>
+
 			<?php echo $member['Member']['gender']; ?>
 			<?php echo $member['Member']['username']; ?>
 			<?php echo $member['Member']['city_volunteer']; ?>
@@ -120,16 +177,6 @@
 			<?php echo $member['Member']['secphone']; ?>
 			<?php echo $member['Member']['secinfo']; ?>
 			<?php echo $member['Member']['languages']; ?>
-			<?php echo stripslashes($member['Member']['hobbies']); ?>
-			<?php echo $member['Member']['organizations']; ?>
-			<?php echo $member['Member']['travels']; ?>
-			<?php echo $member['Member']['plans']; ?>
-			<?php echo stripslashes($member['Member']['aboutmyself']); ?>
-			<?php echo $member['Member']['accom']; ?>
-			<?php echo $member['Member']['offershow']; ?>
-			<?php echo $member['Member']['offerdinner']; ?>
-			<?php echo $member['Member']['offerother']; ?>
-			<?php echo $member['Member']['besttimes']; ?>
 			<?php echo $member['Member']['publictrans']; ?>
 			<?php echo $member['Member']['bigcities']; ?>
 			<?php echo $member['Member']['attractions']; ?>
