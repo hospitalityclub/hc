@@ -34,7 +34,15 @@
  */
 class AppController extends Controller {
   var $components = array('Auth', 'Session');
+
   function beforeRender() {
+    // the idea of this is only to load a variable with the
+    // name of the currently logged user
     $this->set('auth', $this->Auth->user());
+
+    // probably should add the IP address in the following mix
+    // we'll need a senior php security consultant on CSRF
+    // $this->set('token', $this->Session . $this->Auth->user());
+    $this->set('token', md5($this->Session->_userAgent . $this->Auth->user('username') . Configure::read('Security.salt')));
   }
 }

@@ -1,3 +1,7 @@
+<pre>
+<?php echo $token; ?>
+</pre>
+
 <div class="grid_16">
   <?php echo $this->element('nav'); ?>
 </div>
