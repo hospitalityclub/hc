@@ -2,7 +2,8 @@
 class MembersController extends AppController {
 
 	var $name = 'Members';
-
+  var $helpers = array( 'Form', 'Html', 'Js' => array('Jquery')); 
+  // var $helpers = array( 'Form', 'Html', 'Js');
   // auth settings, this controller is used for auth
   function beforeFilter() {
     $this->Auth->fields = array(
@@ -22,6 +23,16 @@ class MembersController extends AppController {
 
   // this action should never be reached
 	function index() {
+	}
+
+  // amonaco: testing
+	function test($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(__('Invalid member', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		// $this->set('member', $this->Member->read(null, $id));
+    $this->set('member', $this->Member->findByUsername($id));
 	}
 
   // this should be modified to be profile show

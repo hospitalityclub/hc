@@ -17,7 +17,7 @@ function fix_truth($str) {
   }
 }
 
-$sql = " SELECT city_volunteer, city, region_volunteer, region, zip, country_volunteer, country, username, gender, bday, bmonth, byear, homepage, photo, homephone, workphone, mobilephone, fax, occupation, updates, secstreet, seccity, secregion, seczip, seccountry, secphone, secinfo, languages, hobbies, organizations, travels, plans, aboutmyself, accom, offershow, offerdinner, offerother, besttimes, publictrans, bigcities, attractions, withgbfriend, withgrandpa, withpar, withsibs, withop, withalone, garden, spacefloor, matress, sofa, bed, ownroom, sleepother, bringtent, bringmat, bringsleep, numberguest, staylength, notifyshould, notifymust, callarrival, callbetween1, callbetween2, guestgender, smoking, nodrugs, noalc, payphone, payfood, dodishes, restriother, pets, othcom, feedback, terms, category, created, updated, accepted, flags, LEVEL, hcnotes, name, street, email, password, secemail, namehide, streethide, lastlogin, ip, vol_teaser, vol_contact_info, vol_why, vol_what, vol_additional, emailerror, lastaccess, latitude, chat_msn, chat_icq, chat_yahoo, chat_skype, chat_others, longitude, chat_aol, nbhost, nbguest, nbcomment, visincity, visinlocation, nbtrust, idcity, nbpspcheck, lang_signup, lang_last, nbvisit, nbvisittoday, myvisitidlist, toberemind, attractions_updated, nbofremindreceivedsincelastlog, nbofemailreceivedsincelastlog FROM  hc.members"; 
+$sql = " SELECT city_volunteer, city, region_volunteer, region, zip, country_volunteer, country, username, gender, bday, bmonth, byear, homepage, photo, homephone, workphone, mobilephone, fax, occupation, updates, secstreet, seccity, secregion, seczip, seccountry, secphone, secinfo, languages, hobbies, organizations, travels, plans, aboutmyself, accom, offershow, offerdinner, offerother, besttimes, publictrans, bigcities, attractions, withgbfriend, withgrandpa, withpar, withsibs, withop, withalone, garden, spacefloor, matress, sofa, bed, ownroom, sleepother, bringtent, bringmat, bringsleep, numberguest, staylength, notifyshould, notifymust, callarrival, callbetween1, callbetween2, guestgender, smoking, nodrugs, noalc, payphone, payfood, dodishes, restriother, pets, othcom, feedback, terms, category, created, updated, accepted, flags, LEVEL, hcnotes, name, street, email, password, secemail, namehide, streethide, lastlogin, ip, vol_teaser, vol_contact_info, vol_why, vol_what, vol_additional, emailerror, lastaccess, latitude, chat_msn, chat_icq, chat_yahoo, chat_skype, chat_others, longitude, chat_aol, nbhost, nbguest, nbcomment, visincity, visinlocation, nbtrust, idcity, nbpspcheck, lang_signup, lang_last, nbvisit, nbvisittoday, myvisitidlist, toberemind, attractions_updated, nbofremindreceivedsincelastlog, nbofemailreceivedsincelastlog FROM  hc.members ORDER BY id"; 
 
 $res = mysql_query($sql);
 if (!$res) {
@@ -96,13 +96,12 @@ while ($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
 
 
 
-$sql
-=
+$sql =
 "INSERT
 INTO
 devel.members
 values
-('',
+('{$row['id']}',
 '{$row['country']}',
 '{$row['idcity']}',
 '{$row['region']}',
