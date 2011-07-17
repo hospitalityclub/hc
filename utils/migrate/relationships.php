@@ -31,18 +31,17 @@ while ($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
       bit_or(myhost) as host
       from hc.comments
       where tomember = {$row2['tomember']}
-      and
-      frommember = {$row2['frommember']}";
+      and frommember = {$row2['frommember']}";
       
     // echo  "$sql3\n";
     $res3 = mysql_query($sql3);
     while ($row3 = mysql_fetch_array($res3, MYSQL_ASSOC)) {
       $sql4 = "insert into devel.relationships
         values('','{$row2['frommember']}','{$row2['tomember']}',0,{$row3['trust']},{$row3['guest']},{$row3['host']},'',now())";
-       $res4 = mysql_query($sql4); 
-       if (!$res4) {
-          die('Invalid query: ' . mysql_error());
-       }
+      $res4 = mysql_query($sql4); 
+      if (!$res4) {
+        die('Invalid query: ' . mysql_error());
+      }
     }
   }
 }
