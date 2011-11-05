@@ -71,6 +71,17 @@ while ($row = mysql_fetch_array($res, MYSQL_ASSOC)) {
   $birthday = $row['byear'] . '-' .$row['bmonth'] . '-' . $row['bday']; 
 
  
+  // translate guestgender
+  if ($row['guestgender'] == 1) {
+    $guestgender = 'male';
+  }
+  else if ($row['guestgender'] == 2) {
+    $guestgender = 'female';
+  }
+  else {
+    $guestgender = 'not_specified';
+  }
+ 
   // translate gender
   if ($row['gender'] == 1) {
     $gender = 'male';
