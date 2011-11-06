@@ -18,6 +18,7 @@ class MembersController extends AppController {
       'password' => 'password'
     );
     $this->Auth->authError = "Please log in first in order to continue...";
+    $this->Auth->allow('register');
   }
 
   // user logs out, this kills the session
@@ -29,15 +30,19 @@ class MembersController extends AppController {
   function login() {
   }
 
-  function city($id = null) {
+  function register() {
 
-    /*
-    $members = $this->Member->find('all', array(
-      'conditions' => array('Member.city_id' => $id),
-      'limit' => 10
-    ));
-    $this->set('data', $members);
-     */
+    if (!empty($this->data)) {
+      if ($this->data['Member']['password'] == $this->Auth->password($this->data['Member']['password_confirm'])) {
+        $this->Member->create();
+        $this->Member->save($this->data);
+        $this->redirect(array('controller' => 'countries'));
+      }
+    }
+
+  } 
+
+  function city($id = null) {
 
     $this->paginate = array(
       'conditions' => array('Member.city_id' => $id),
