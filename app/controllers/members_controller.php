@@ -3,7 +3,7 @@ class MembersController extends AppController {
 
 	var $name = 'Members';
   var $helpers = array( 'Form', 'Html', 'Js' => array('Jquery')); 
-  // var $helpers = array( 'Form', 'Html', 'Js');
+
   // auth settings, this controller is used for auth
   function beforeFilter() {
     $this->Auth->fields = array(
@@ -17,13 +17,19 @@ class MembersController extends AppController {
     $this->redirect($this->Auth->logout());
   }
 
-  // keep this action empty, this is used for auth
+  // keep this action empty, login form
   function login() {
   }
 
-  // this action should never be reached
-	function index() {
-	}
+  function city($id = null) {
+
+    $members = $this->Member->find('all', array(
+      'conditions' => array('Member.city_id' => $id),
+      'limit' => 10
+    ));
+    $this->set('data', $members);
+
+  }
 
   // amonaco: testing
 	function test($id = null) {

@@ -2,54 +2,16 @@
 class RegionsController extends AppController {
 
 	var $name = 'Regions';
-  var $uses = array('City');
+  var $uses = array('Region');
 
-	function index($id = null) {
-		$this->Region->recursive = 0;
-		$this->set('regions', $this->paginate());
-	}
+  // displays regions for a given country_id
+  function country($id = null) {
 
-	function add() {
-		if (!empty($this->data)) {
-			$this->Region->create();
-			if ($this->Region->save($this->data)) {
-				$this->Session->setFlash(__('The region has been saved', true));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The region could not be saved. Please, try again.', true));
-			}
-		}
-	}
+    $regions = $this->Region->find('all', array(
+      'conditions' => array('Region.country_id' => $id)
+    ));
+    $this->set('data', $regions);
 
-	function edit($id = null) {
-		if (!$id && empty($this->data)) {
-			$this->Session->setFlash(__('Invalid region', true));
-			$this->redirect(array('action' => 'index'));
-		}
-		if (!empty($this->data)) {
-			if ($this->Region->save($this->data)) {
-				$this->Session->setFlash(__('The region has been saved', true));
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(__('The region could not be saved. Please, try again.', true));
-			}
-		}
-		if (empty($this->data)) {
-			$this->data = $this->Region->read(null, $id);
-		}
-	}
-
-	function delete($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(__('Invalid id for region', true));
-			$this->redirect(array('action'=>'index'));
-		}
-		if ($this->Region->delete($id)) {
-			$this->Session->setFlash(__('Region deleted', true));
-			$this->redirect(array('action'=>'index'));
-		}
-		$this->Session->setFlash(__('Region was not deleted', true));
-		$this->redirect(array('action' => 'index'));
-	}
+  }
 }
 ?>
