@@ -14,4 +14,5 @@ class CountriesController extends AppController {
     $countries = $this->paginate('Country');
     $this->set('countries', $countries); 
   }
+}
 ?>

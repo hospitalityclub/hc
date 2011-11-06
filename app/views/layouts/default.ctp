@@ -27,7 +27,7 @@
     <?php echo $content_for_layout; ?>
 
     <div class="grid_16">
-      <?php // echo $this->element('sql_dump'); ?>
+      <?php echo $this->element('sql_dump'); ?>
     </div>
   </div> <!-- container_16 -->
   <?php echo $this->Js->writeBuffer(); ?>

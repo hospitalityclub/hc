@@ -33,7 +33,7 @@
   <?php foreach (array_chunk($countries, 3) as $group): ?>
   <tr>
     <?php foreach ($group as $country): ?>
-    <td><a href="<?php echo '/hc3/countries/show/'. $country['Country']['id']; ?>"><?php echo $country['Country']['name'] ?></a></td>
+    <td><a href="<?php echo '/hc3/regions/country/'. $country['Country']['id']; ?>"><?php echo $country['Country']['name'] ?></a></td>
     <td><?php echo $country['Country']['nbmembers'] ?> </td>
     <?php endforeach; ?>
   </tr>

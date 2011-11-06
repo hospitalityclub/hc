@@ -4,12 +4,20 @@ class MembersController extends AppController {
 	var $name = 'Members';
   var $helpers = array( 'Form', 'Html', 'Js' => array('Jquery')); 
 
+  var $paginate = array(
+      'limit' => 40,
+      'order' => array(
+        // 'Member.id' => 'asc'
+      )
+  );
+
   // auth settings, this controller is used for auth
   function beforeFilter() {
     $this->Auth->fields = array(
       'username' => 'username',
       'password' => 'password'
     );
+    $this->Auth->authError = "Please log in first in order to continue...";
   }
 
   // user logs out, this kills the session
@@ -23,16 +31,35 @@ class MembersController extends AppController {
 
   function city($id = null) {
 
+    /*
     $members = $this->Member->find('all', array(
       'conditions' => array('Member.city_id' => $id),
       'limit' => 10
     ));
     $this->set('data', $members);
+     */
+
+    $this->paginate = array(
+      'conditions' => array('Member.city_id' => $id),
+      'limit' => 50
+    );
+    $data = $this->paginate('Member');
+    $this->set('data', $data);
 
   }
 
-  // amonaco: testing
-	function test($id = null) {
+  // displays the user profile
+	function display($id = null) {
+		if (!$id) {
+			$this->Session->setFlash(__('Invalid member', true));
+			$this->redirect(array('action' => 'index'));
+		}
+		// $this->set('member', $this->Member->read(null, $id));
+    $this->set('member', $this->Member->findById($id));
+	}
+
+  // amonaco: should we have the username in the url?
+	function name($id = null) {
 		if (!$id) {
 			$this->Session->setFlash(__('Invalid member', true));
 			$this->redirect(array('action' => 'index'));
@@ -41,17 +68,7 @@ class MembersController extends AppController {
     $this->set('member', $this->Member->findByUsername($id));
 	}
 
-  // this should be modified to be profile show
-	function view($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(__('Invalid member', true));
-			$this->redirect(array('action' => 'index'));
-		}
-		// $this->set('member', $this->Member->read(null, $id));
-    $this->set('member', $this->Member->findByUsername($id));
-	}
-
-  // should be modified to edit profile
+   // should be modified to edit profile
 	function edit($username = null) {
 		if (!$username && empty($this->data)) {
 			$this->Session->setFlash(__('Invalid member', true));
