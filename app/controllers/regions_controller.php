@@ -2,18 +2,11 @@
 class RegionsController extends AppController {
 
 	var $name = 'Regions';
+  var $uses = array('City');
 
-	function index() {
+	function index($id = null) {
 		$this->Region->recursive = 0;
 		$this->set('regions', $this->paginate());
-	}
-
-	function view($id = null) {
-		if (!$id) {
-			$this->Session->setFlash(__('Invalid region', true));
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->set('region', $this->Region->read(null, $id));
 	}
 
 	function add() {
