@@ -34,7 +34,7 @@
   <tr>
     <?php foreach ($group as $country): ?>
     <td><a href="<?php echo '/hc3/regions/country/'. $country['Country']['id']; ?>"><?php echo $country['Country']['name'] ?></a></td>
-    <td><?php echo $country['Country']['nbmembers'] ?> </td>
+    <td><?php echo $country['Country']['members'] ?> </td>
     <?php endforeach; ?>
   </tr>
   <?php endforeach; ?>

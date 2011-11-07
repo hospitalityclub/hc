@@ -6,12 +6,12 @@
   <?php echo $this->element('side1'); ?>
 </div>
 <div class="grid_10">
-<h4> Menu
+<h2> Menu
   &gt; <?php echo $member['Country']['name'] ?>
   &gt; <?php echo $member['Member']['region']; ?>
   &gt; <?php echo $member['City']['name']; ?>
   &gt; <?php echo $member['Member']['username']; ?>
-</h4>
+</h2>
 <h5>Profile</h5>
 <div style="float: left; width: 65%">
 <table>

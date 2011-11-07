@@ -2,16 +2,18 @@
 class RegionsController extends AppController {
 
 	var $name = 'Regions';
-  var $uses = array('Region');
+  var $uses = array('Region', 'Country');
 
   // displays regions for a given country_id
   function country($id = null) {
 
-    $regions = $this->Region->find('all', array(
-      'conditions' => array('Region.country_id' => $id)
+    $country = $this->Country->find('all', array(
+      'fields' => 'name',
+      'conditions' => array('Country.id' => $id)
     ));
-    $this->set('data', $regions);
 
+    // amonaco: not sure what's going on here
+    $this->set('country', array_shift($country));
   }
 }
 ?>
