@@ -1,7 +1,9 @@
 <?php 
-/* App schema generated on: 2011-11-12 22:46:58 : 1321134418*/
+/* App schema generated on: 2011-11-14 22:52:13 : 1321307533*/
 class AppSchema extends CakeSchema {
 	var $name = 'App';
+
+	var $file = 'schema_2.php';
 
 	function before($event = array()) {
 		return true;
@@ -27,15 +29,6 @@ class AppSchema extends CakeSchema {
 		'nbmembers' => array('type' => 'integer', 'null' => false, 'default' => '0'),
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'idregion' => array('column' => 'region_id', 'unique' => 0), 'name' => array('column' => 'name', 'unique' => 0), 'other_names' => array('column' => 'other_names', 'unique' => 0), 'i_city_fulltext' => array('column' => array('name', 'other_names'), 'unique' => 0), 'near_city_names_fulltext' => array('column' => 'near_city_names', 'unique' => 0)),
 		'tableParameters' => array('charset' => 'latin1', 'collate' => 'latin1_swedish_ci', 'engine' => 'MyISAM')
-	);
-	var $comments = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary'),
-		'from_member' => array('type' => 'integer', 'null' => false, 'default' => '0', 'key' => 'index'),
-		'to_member' => array('type' => 'integer', 'null' => false, 'default' => '0', 'key' => 'index'),
-		'comment' => array('type' => 'text', 'null' => false, 'default' => NULL, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'created' => array('type' => 'datetime', 'null' => false, 'default' => '0000-00-00 00:00:00'),
-		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'to_member' => array('column' => 'to_member', 'unique' => 0), 'from_member' => array('column' => 'from_member', 'unique' => 0)),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'MyISAM')
 	);
 	var $countries = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'length' => 4, 'key' => 'primary'),
@@ -191,19 +184,6 @@ class AppSchema extends CakeSchema {
 		'main_city_id' => array('type' => 'integer', 'null' => true, 'default' => NULL),
 		'nbmembers' => array('type' => 'integer', 'null' => false, 'default' => '0'),
 		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1), 'country_id' => array('column' => 'country_id', 'unique' => 0), 'name' => array('column' => 'name', 'unique' => 0), 'selectable' => array('column' => 'selectable', 'unique' => 0), 'region_fulltext' => array('column' => array('name', 'other_names'), 'unique' => 0)),
-		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'MyISAM')
-	);
-	var $relations = array(
-		'id' => array('type' => 'integer', 'null' => false, 'default' => NULL, 'key' => 'primary'),
-		'from_member' => array('type' => 'integer', 'null' => true, 'default' => NULL),
-		'to_member' => array('type' => 'integer', 'null' => true, 'default' => NULL),
-		'following' => array('type' => 'boolean', 'null' => true, 'default' => '0'),
-		'trust' => array('type' => 'boolean', 'null' => true, 'default' => '0'),
-		'guest' => array('type' => 'boolean', 'null' => true, 'default' => '0'),
-		'host' => array('type' => 'boolean', 'null' => true, 'default' => '0'),
-		'modified' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
-		'created' => array('type' => 'datetime', 'null' => true, 'default' => NULL),
-		'indexes' => array('PRIMARY' => array('column' => 'id', 'unique' => 1)),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'MyISAM')
 	);
 }
