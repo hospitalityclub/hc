@@ -2,3 +2,6 @@
 2011-07-07 21:12:28 Notice: Notice (8): Trying to get property of non-object in [/var/www/hc3/app/views/countries/index.ctp, line 1]
 2011-07-07 21:13:04 Notice: Notice (8): Undefined index:  username in [/var/www/hc3/app/views/countries/index.ctp, line 1]
 2011-07-07 21:38:05 Notice: Notice (8): Undefined property: PagesController::$Auth in [/var/www/hc3/cake/libs/controller/app_controller.php, line 38]
+2011-12-19 16:48:15 Notice: Notice (8): Undefined index: members in [/var/www/hc3/app/views/countries/index.ctp, line 37]
+2011-12-19 16:48:35 Notice: Notice (8): Undefined property: View::$Js in [/var/www/hc3/app/views/layouts/default.ctp, line 33]
+2011-12-19 16:49:00 Notice: Notice (8): Undefined index: members in [/var/www/hc3/app/views/countries/index.ctp, line 35]
