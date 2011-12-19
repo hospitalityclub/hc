@@ -31,7 +31,6 @@ class MembersController extends AppController {
   }
 
   function register() {
-
     if (!empty($this->data)) {
       if ($this->data['Member']['password'] == $this->Auth->password($this->data['Member']['password_confirm'])) {
         $this->Member->create();
@@ -39,18 +38,22 @@ class MembersController extends AppController {
         $this->redirect(array('controller' => 'countries'));
       }
     }
-
   } 
 
   function city($id = null) {
-
+    // retrieve only needed data
+    $this->Member->recursive = -1;
     $this->paginate = array(
-      'conditions' => array('Member.city_id' => $id),
+      'conditions' => array(
+        'Member.city_id' => $id
+      ),
+      'fields' => array(
+        'id','name','nbcomment'
+      ),
       'limit' => 50
     );
-    $data = $this->paginate('Member');
-    $this->set('data', $data);
-
+    $members = $this->paginate('Member');
+    $this->set('members', $members);
   }
 
   // displays the user profile
