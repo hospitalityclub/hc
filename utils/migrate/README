@@ -1,3 +1,8 @@
+This directory is intended to contain future migration
+scripts from the legacy HC database system to the HC3
+database schema
+
+NOTES:
 wheremet - goes to secondary table
 passportcheck - goes to same table
 
