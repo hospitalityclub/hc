@@ -1,7 +1,7 @@
 <?php
 class RegionsController extends AppController {
 
-	var $name = 'Regions';
+  var $name = 'Regions';
   var $uses = array('Region', 'Country');
 
   // displays regions for a given country_id
@@ -12,8 +12,9 @@ class RegionsController extends AppController {
       'conditions' => array('Country.id' => $id)
     ));
 
-    // amonaco: not sure what's going on here
-    $this->set('country', array_shift($country));
+    $country_list = array_shift($country);
+    $this->set('country', $country_list);
+    $this->set('regions_count', count($country_list['Region']));
   }
 }
 ?>

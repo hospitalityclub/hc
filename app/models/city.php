@@ -14,6 +14,8 @@ class City extends AppModel {
 		)
 	);
 
+
+
 	var $hasMany = array(
 		'Member' => array(
 			'className' => 'Member',

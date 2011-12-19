@@ -30,6 +30,6 @@
       <?php echo $this->element('sql_dump'); ?>
     </div>
   </div> <!-- container_16 -->
-  <?php echo $this->Js->writeBuffer(); ?>
+  <?php // echo $this->Js->writeBuffer(); ?>
 </body>
 </html>

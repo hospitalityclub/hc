@@ -6,3 +6,8 @@
 2011-12-19 16:53:59 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'City.region_id' in 'where clause'</span> in [/var/www/hc3/cake/libs/model/datasources/dbo_source.php, line 684]
 2011-12-19 16:53:59 Warning: Warning (2): array_chunk() expects parameter 1 to be array, boolean given in [/var/www/hc3/app/views/cities/region.ctp, line 13]
 2011-12-19 16:53:59 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/hc3/app/views/cities/region.ctp, line 13]
+2011-12-19 17:43:29 Warning: Warning (2): array_chunk() expects parameter 1 to be array, null given in [/var/www/hc3/app/views/regions/country.ctp, line 8]
+2011-12-19 17:43:29 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/hc3/app/views/regions/country.ctp, line 8]
+2011-12-19 18:09:42 Warning: Warning (512): <span style="color:Red;text-align:left"><b>SQL Error:</b> 1054: Unknown column 'City.country_id' in 'on clause'</span> in [/var/www/hc3/cake/libs/model/datasources/dbo_source.php, line 684]
+2011-12-19 18:09:42 Warning: Warning (2): array_chunk() expects parameter 1 to be array, boolean given in [/var/www/hc3/app/views/cities/region.ctp, line 9]
+2011-12-19 18:09:42 Warning: Warning (2): Invalid argument supplied for foreach() in [/var/www/hc3/app/views/cities/region.ctp, line 9]

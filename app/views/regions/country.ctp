@@ -2,7 +2,8 @@
 <?php echo $this->element('side1'); ?>
 </div>
 <div class="grid_10">
-  <h2> Menu &gt; Countries > <?php echo $country['Country']['name']; ?> > Regions</h2>
+  <h2> Menu &gt; Countries > <?php echo $country['Country']['name']; ?> </h2>
+  <h5><i>There are <?php echo $regions_count; ?> of Regions in <?php echo $country['Country']['name']; ?>:</i></h5>
   <table>
     <?php foreach (array_chunk($country['Region'], 3) as $group): ?>
     <tr>
