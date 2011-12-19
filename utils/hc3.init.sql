@@ -25,9 +25,9 @@ DROP TABLE IF EXISTS `cities`;
 CREATE TABLE `cities` (
   `id` int(4) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `region_id` int(11) DEFAULT NULL,
   `latitude` float DEFAULT NULL,
   `longitude` float DEFAULT NULL,
-  `idregion` int(4) DEFAULT NULL,
   `other_names` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
   `near_city_names` text CHARACTER SET utf8,
   `created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -36,9 +36,8 @@ CREATE TABLE `cities` (
   `geofinfo` text CHARACTER SET utf8 NOT NULL,
   `nbmembersformap` int(11) NOT NULL DEFAULT '0',
   `selectable` tinyint(1) DEFAULT '0',
-  `nbmembers` int(11) NOT NULL DEFAULT '0',
+  `members` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `idregion` (`idregion`),
   KEY `name` (`name`),
   KEY `other_names` (`other_names`),
   FULLTEXT KEY `i_city_fulltext` (`name`,`other_names`),
@@ -315,4 +314,4 @@ CREATE TABLE `relations` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-12-19 16:50:31
+-- Dump completed on 2011-12-19 16:55:02
