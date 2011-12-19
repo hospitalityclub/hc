@@ -50,7 +50,3 @@ $this->Js->event('click', $this->Js->alert('hey you!'));
 <?php echo $this->Form->input('username'); ?>
 <?php echo $this->Js->submit('Add', array('update' => '#notification', 'class'=>'testclass', 'url'=>'/hc3/members/test'));  ?>
 <?php echo $this->Form->end(); ?>
-
-
-
-

@@ -1,10 +1,6 @@
-<div class="grid_16">
-  <?php echo $this->element('nav'); ?>
-  </div>
-
-    <div class="grid_3">
-      <?php echo $this->element('side1'); ?>
-  </div>
+<div class="grid_3">
+    <?php echo $this->element('side1'); ?>
+</div>
 <div class="grid_10">
 
   <h2> Menu &gt; Countries > CName > Regions</h2>

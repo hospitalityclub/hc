@@ -4,10 +4,6 @@
 </pre>
 -->
 
-<div class="grid_16">
-  <?php echo $this->element('nav'); ?>
-</div>
-
 <div class="grid_3">
   <?php echo $this->element('side1'); ?>
 </div>

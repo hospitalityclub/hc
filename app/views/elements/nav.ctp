@@ -1,6 +1,3 @@
-<style type="text/css">
-</style>
-
 <div id="nav_wrap">
   <div class="nav_left"><b>HC3 (devel)</b></div>
   <div class="nav_item"><a href="/hc3/">Home</a></div>

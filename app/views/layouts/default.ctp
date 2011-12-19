@@ -19,12 +19,10 @@
 </head>
 <body>
   <div class="container_16">
-    <!--
     <div class="grid_16">
-      <h3 style="color: red"><?php echo $this->Session->flash(); ?> </h3>
-      <?php // echo $this->element('header'); ?>
+      <?php echo $this->element('nav'); ?>
+      <h3 style="color: #f9c"><?php echo $this->Session->flash(); ?> </h3>
     </div>
-    -->
 
     <?php echo $content_for_layout; ?>
 
