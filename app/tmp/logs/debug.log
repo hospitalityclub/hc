@@ -12,3 +12,5 @@
 2011-12-19 16:54:14 Notice: Notice (8): Undefined property: View::$Js in [/var/www/hc3/app/views/layouts/default.ctp, line 33]
 2011-12-19 16:54:34 Notice: Notice (8): Undefined property: View::$Js in [/var/www/hc3/app/views/layouts/default.ctp, line 33]
 2011-12-19 16:54:40 Notice: Notice (8): Undefined property: View::$Js in [/var/www/hc3/app/views/layouts/default.ctp, line 33]
+2011-12-19 17:14:58 Notice: Notice (8): Undefined property: View::$Js in [/var/www/hc3/app/views/layouts/default.ctp, line 35]
+2011-12-19 17:15:01 Notice: Notice (8): Undefined property: View::$Js in [/var/www/hc3/app/views/layouts/default.ctp, line 35]

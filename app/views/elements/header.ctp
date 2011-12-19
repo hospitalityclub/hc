@@ -1,3 +1,4 @@
+<!-- 
 <style>
 .title {
   font-family: 'Shadows Into Light', serif;
@@ -16,7 +17,7 @@
 </style>
 
 <div class="grid_11">
-<div class="title">HospitalityClub</div> <!-- just testing -->
+<div class="title"></div>
 </div>
 <div class="grid_5" style="font-weight: bold; text-align: right; color: #aaa">
 FAQ
@@ -38,3 +39,4 @@ Help
 Logout
 </div>
 <div class="clear">
+-->

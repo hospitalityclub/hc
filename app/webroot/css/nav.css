@@ -9,21 +9,22 @@
 .nav_left {
   background: #3A7FD2;
   float: left;
-  padding-bottom: 2px; 
   border-top: 3px solid #eee;
   height: 21px;
-  width: 17%;;
+  width: 20%;;
+  padding: 2px 0 0 12px;
+  color: #fff;
+  font-size: 110%;
 }
 .nav_right {
   background: #3A7FD2;
   color: #fff;
   font-size: 110%;
   text-align: right;
-  padding: 3px 24px 2px 8px;
+  padding: 3px 24px 2px 0;
   float: left;
-  /* padding-bottom: 2px; not needed anymore since text added */
   border-top: 3px solid #eee;
-  width: 43%;
+  width: 20%;
 }
 
 /* fix for logout link */
@@ -34,7 +35,8 @@
   margin-left: 0px;
   background: #75A6E0;
   float: left;
-  padding: 3px 24px 2px 8px;
+  padding: 3px 0 2px 12px;
+  width: 5%;
   border-top: 3px solid #eee;
 }
 
@@ -53,8 +55,8 @@
   color: #333 !important;
   margin-left: 0px;
   float: left;
-  padding-left: 8px; 
-  padding: 3px 24px 2px 8px;
+  padding: 3px 0 2px 12px;
+  width: 6%;
   border-top: 3px solid #FCDA76;
 }
 
