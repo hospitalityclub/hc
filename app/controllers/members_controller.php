@@ -28,6 +28,7 @@ class MembersController extends AppController {
 
   // keep this action empty, login form
   function login() {
+    $this->layout = 'login';
   }
 
   function register() {

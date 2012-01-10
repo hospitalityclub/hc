@@ -79,8 +79,8 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'hc3',
-        'encoding' => 'utf8',
+		'database' => 'devel',
+    'encoding' => 'utf8',
 		'prefix' => '',
 	);
 
