@@ -15,7 +15,7 @@
             ?>
             <div id="remember"><?php echo $form->input('remember', array(
                 'type' => 'checkbox',
-                'label' => __('Keep me logged in on this computer for 2 weeks.', true))); ?></div>
+                'label' => __('Remember me for 2 weeks.', true))); ?></div>
             <?php
 
             // Auth error message
