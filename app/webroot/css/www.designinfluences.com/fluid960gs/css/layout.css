@@ -62,7 +62,7 @@ h1#branding {
 h2#page-heading {
 	font-weight:normal;
 	padding:.5em;
-	margin: 6px 0 10px 0;
+	margin:0 0 10px 0;
 	border-bottom:1px solid #ccc;
 }
 
@@ -86,7 +86,7 @@ h2#page-heading {
 .box h2 a,
 .box h2 a.visible {
 	color:#fff;
-	background:#333 url("/hc3/img/switch_minus.gif") 97% 50% no-repeat;
+	background:#333 url("../img/switch_minus.gif") 97% 50% no-repeat;
 	display:block;
 	padding:6px 12px;
 	margin:-6px -12px;
@@ -105,7 +105,7 @@ h2#page-heading {
 
 .box h2 a.hidden,
 .box h2 a.hidden:hover {
-	background-image: url("/hc3/img/switch_plus.gif");
+	background-image: url("../img/switch_plus.gif");
 }
 .box h2 a:hover {
 	background-color:#111;

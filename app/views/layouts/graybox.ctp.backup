@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="/hc3/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/hc3/css/wf.main.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/hc3/css/grid.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/hc3/css/graybox_nav.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/hc3/css/layout.css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" href="/hc3/css/ie6.css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" href="/hc3/css/ie.css" media="screen" /><![endif]-->
+
+    <link  href="http://fonts.googleapis.com/css?family=Shadows+Into+Light:regular&v1" rel="stylesheet" type="text/css" >
+    <title>
+    Hospitality Club (Development) -
+    Members  </title>
+</head>
+<body>
+    <div class="container_16">
+        <div class="grid_2"> &nbsp; <!-- --> </div>
+        <div class="grid_14">
+            <div class="status_rename">You are logged in as <?php echo $auth['Member']['username']; ?> <a href="/hc3/members/logout/"> Logout? </a>
+            <?php echo $this->element('graybox_nav'); ?>
+            <h3 style="color: #f9c"><?php echo $this->Session->flash(); ?> </h3>
+            <?php echo $content_for_layout; ?>
+        </div>
+        <div class="grid_2"> &nbsp; <!-- --> </div>
+        <div class="clear"> </div>
+        <div class="grid_16">
+            <?php echo $this->element('sql_dump'); ?>
+        </div>
+    </div> <!-- container_16 -->
+</body>
+</html>

@@ -4,8 +4,6 @@ Grey Box Method - Layout CSS
 ----------------------------------------------- */
 
 body {
-	background: #eee;
-	border-top: 5px solid #000;
 	color: #333;
 	font-size: 11px;
 	padding: 0 0 40px;
@@ -15,9 +13,9 @@ body {
 /* anchors
 ----------------------------------------------- */
 a {
-	color: #000;
-	font-weight:bold;
-	text-decoration: none;
+	color: #2C598F;
+	/* text-decoration: underline; */ 
+	text-decoration: none; 
 }
 a:hover {
 	color:#333;
@@ -28,14 +26,18 @@ a:hover {
 ----------------------------------------------- */
 .container_12,
 .container_16 {
-	background:#fff;
+	/* background:#fff; */
 }
 
 
 /* headings
 ----------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {line-height:1.2em; margin-bottom:.3em;}
-h2 {margin-top:1em;}
+h2 {
+  /* padding-left: 0.4em; */
+  padding-bottom: 0.2em; 
+}
+
 h5 {font-size:1.2em;}
 h6 {font-size:1em; text-transform:uppercase;}
 
@@ -47,13 +49,19 @@ h1 a {
 
 /* branding
 ----------------------------------------------- */
-h1#branding {
+#branding {
 	font-weight:normal;
 	font-size:3em;
 	text-align:left;
-	background:#aaa;
+	/* background:#aaa; */
 	padding:.7em 1em;
 	margin-bottom:0;
+  margin-top: 8px;
+}
+.header {
+ /* background-image:url('/devel/img/header.png');
+ background-repeat:repeat-x; 
+ height: 100px; */
 }
 
 
@@ -62,7 +70,7 @@ h1#branding {
 h2#page-heading {
 	font-weight:normal;
 	padding:.5em;
-	margin: 6px 0 10px 0;
+	margin:0 0 10px 0;
 	border-bottom:1px solid #ccc;
 }
 
@@ -86,7 +94,7 @@ h2#page-heading {
 .box h2 a,
 .box h2 a.visible {
 	color:#fff;
-	background:#333 url("/hc3/img/switch_minus.gif") 97% 50% no-repeat;
+	background:#333 url("../img/switch_minus.gif") 97% 50% no-repeat;
 	display:block;
 	padding:6px 12px;
 	margin:-6px -12px;
@@ -105,7 +113,7 @@ h2#page-heading {
 
 .box h2 a.hidden,
 .box h2 a.hidden:hover {
-	background-image: url("/hc3/img/switch_plus.gif");
+	background-image: url("../img/switch_plus.gif");
 }
 .box h2 a:hover {
 	background-color:#111;
@@ -129,6 +137,10 @@ div.menu .block {
 p {
 	margin-bottom:1em;
 }
+p.bold {
+	font-weight: bold;
+}
+
 blockquote {
 	font-family: Georgia, 'Times New Roman', serif;
 	font-size:1.2em;
@@ -245,7 +257,7 @@ ul.section li.current > a.active:hover {
 ----------------------------------------------- */
 table {
 	width:100%;
-	border:1px solid #bbb;
+	/* border:1px solid #bbb; */
 	margin-bottom:10px;
 }
 col.colC {
@@ -256,43 +268,22 @@ th, td {
 	text-align:left;
 }
 thead th {
-	border-bottom:2px solid #888;
-	background:#bbb;
 	padding:.4em 1em .2em;
 }
 thead th.table-head {
 	font-size:1em;
 	font-weight:normal;
 	text-transform:uppercase;
-	color:#fff;
-	background:#555;
-	border:1px solid #555;
+	color:#333;
 }
 tbody th,
 tbody td {
-	border-top:1px solid #bbb;
-	border-bottom:1px solid #bbb;
-	background:#eee;
+	/* border-top:1px solid #bbb;
+	border-bottom:1px solid #bbb; */
 }
 tbody tr.odd th,
 tbody tr.odd td {
 	background:#fff;
-}
-tfoot th,
-tfoot td {
-	border-top:2px solid #666;
-	background:#eee;
-}
-tfoot tr.total th,
-tfoot tr.total td {
-	border-top:6px double #666;
-}
-tfoot tr.total th {
-	text-transform:uppercase;
-}
-th.currency,
-td.currency {
-	text-align:right;
 }
 
 
@@ -517,4 +508,13 @@ input.search.button {
 }
 #kwick .four {
 	background: #999;
+}
+
+.center_wrap {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+.wrap {
+  padding-left: 2%;
+  padding-right: 2%;
 }

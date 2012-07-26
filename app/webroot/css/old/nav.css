@@ -1,0 +1,75 @@
+/*
+ * A very simple cross-browser navigation
+ * using <div> tags instead of <ul>/<li>
+ *
+ * Tested in IE7, FF3+, Safari & Chrome
+ * by amonaco@gmail.com
+ */
+
+.nav_left {
+  background: #3A7FD2;
+  float: left;
+  border-top: 3px solid #eee;
+  height: 21px;
+  width: 20%;;
+  padding: 2px 0 0 12px;
+  color: #fff;
+  font-size: 110%;
+}
+.nav_right {
+  background: #3A7FD2;
+  color: #fff;
+  font-size: 110%;
+  text-align: right;
+  padding: 3px 24px 2px 0;
+  float: left;
+  border-top: 3px solid #eee;
+  width: 20%;
+}
+
+/* fix for logout link */
+.nav_right a { color: #fff; font-weight: bold; }
+.nav_right a:visited { color: #fff; font-weight: bold; }
+
+.nav_item {
+  margin-left: 0px;
+  background: #75A6E0;
+  float: left;
+  padding: 3px 0 2px 12px;
+  width: 5%;
+  border-top: 3px solid #eee;
+}
+
+.nav_item:hover {
+  background: #3A7FD2;
+  border-top: 3px solid #ddd;
+}
+
+.nav_item a{
+  color: #fff;
+  font-size: 110%;
+}
+
+.nav_select {
+  background: #fff !important;
+  color: #333 !important;
+  margin-left: 0px;
+  float: left;
+  padding: 3px 0 2px 12px;
+  width: 6%;
+  border-top: 3px solid #FCDA76;
+}
+
+.nav_select a{
+  color: #333;
+  font-size: 110%;
+    text-decoration: none;
+}
+
+#nav_wrap {
+  background: #3A7FD2;
+}
+
+.nav_item a {
+    text-decoration: none;
+}
