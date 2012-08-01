@@ -7,14 +7,14 @@
         <h3>
             <a href="#">Server Under Load</a>
         </h3>
-        <p class="meta">Vancouver, BC — Wednesday, 23 April 2012</p>
+        <p class="meta">Wednesday, 23 April 2012</p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="#">More info.</a></p>
     </div>
     <div class="article">
         <h3>
             <a href="#">Messages Slow</a>
         </h3>
-        <p class="meta">Vancouver, BC — Wednesday, 23 April 2012</p>
+        <p class="meta">Wednesday, 23 April 2012</p>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. <a href="#">Visit site.</a></p>
     </div>
     <div class="article">
@@ -22,7 +22,7 @@
         <h2>Heading 2</h2>
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>
-        <p class="meta">Vancouver, BC — Wednesday, 23 April 2012</p>
+        <p class="meta">Wednesday, 23 April 2012</p>
         <a href="#" class="image">
             <img src="img/photo_60x60.jpg" width="60" height="60" alt="photo" />
         </a>

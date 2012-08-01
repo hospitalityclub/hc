@@ -8,71 +8,63 @@
                     <a href="12/fluid/mootools/">Search</a>
                 </li>
                 <li>
-                    <a href="12/fluid/jquery/">jQuery</a>
+                    <a href="12/fluid/jquery/">Statistics</a>
                 </li>
                 <li>
-                    <a href="12/fluid/none/">No Javascript</a>
+                    <a href="12/fluid/none/">Who's Online?</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="16/">Your Profile</a>
+            <a href="">Profile</a>
             <ul>
                 <li>
-                    <a href="16/fluid/mootools/">MooTools</a>
+                    <a href="">View</a>
                 </li>
                 <li>
-                    <a href="16/fluid/jquery/">jQuery</a>
-                </li>
-                <li>
-                    <a href="16/fluid/none/">No Javascript</a>
+                    <a href="">Edit</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="12/fixed/">Search</a>
+            <a href="">Messages</a>
             <ul>
                 <li>
-                    <a href="12/fixed/mootools/">MooTools</a>
+                    <a href="">Inbox</a>
                 </li>
                 <li>
-                    <a href="12/fixed/jquery/">jQuery</a>
+                    <a href="">Write Message</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="">Search</a>
+            <ul>
+                <li>
+                    <a href="">Quick Search</a>
                 </li>
                 <li>
-                    <a href="12/fixed/none/">No Javascript</a>
+                    <a href="">Advanced Search</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="16/fixed/">Countries</a>
+            <a href="">Countries</a>
             <ul>
                 <li>
-                    <a href="16/fixed/mootools/">MooTools</a>
+                    <a href="">Country List</a>
                 </li>
                 <li>
-                    <a href="16/fixed/jquery/">jQuery</a>
-                </li>
-                <li>
-                    <a href="16/fixed/none/">No Javascript</a>
+                    <a href="">HC Map</a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href="http://symphony-cms.com/discuss/thread/231/">Forum</a>
-            <ul>
-                <li>
-                    <a href="http://github.com/bauhouse/fluid960gs/tree/">Download: Github</a>
-                </li>
-                <li>
-                    <a href="http://github.com/bauhouse/sym-fluid960gs/tree/">Symphony Ensemble</a>
-                </li>
-                <li>
-                    <a href="http://symphony-cms.com/discuss/thread/231/">Forum Discussion</a>
-                </li>
-            </ul>
+            <a href="">Forum</a>
         </li>
         <li class="secondary">
-            <a href="http://960.gs/" title="960.gs | A CSS grid system developed by Nathan Smith">You're logged in as roberto. Logout?</a>
+            <a href="/hc3/members/logout/" title="Logout button">You're logged in as <?php echo $auth['Member']['username']; ?>. Logout?</a>
         </li>
 
         <li class="secondary">
@@ -80,4 +72,4 @@
         </li>
     </ul>
 </div>
-
+<!-- based on http://github.com/bauhouse/fluid960gs/ -->

@@ -8,8 +8,8 @@
 </div>
 <div class="grid_7">
     <?php echo $this->element('info'); ?>
-    <?php echo $this->element('countries'); ?>
-    <?php echo $this->element('profile'); ?>
+    <?php // echo $this->element('countries'); ?>
+    <?php // echo $this->element('profile'); ?>
 </div>
 <div class="grid_5">
     <!-- Login / Register box -->

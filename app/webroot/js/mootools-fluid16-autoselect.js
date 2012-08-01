@@ -34,7 +34,7 @@ window.addEvent('domready', function() {
 	// Kwick Box
 	if ($('kwick-box')) {
 		var kwicks = $$('#kwick .kwick');
-		var fx = new Fx.Elements(kwicks, {wait: false, duration: 200, transition: Fx.Transitions.quadOut});
+		var fx = new Fx.Elements(kwicks, {wait: false, duration: 100, transition: Fx.Transitions.quadOut});
 		kwicks.each(function(kwick, i){
 			kwick.addEvent('mouseenter', function(e){
 				var obj = {};
@@ -64,6 +64,7 @@ window.addEvent('domready', function() {
 	if ($('section-menu')) {
 		var accordion = new Accordion('a.menuitem', 'ul.submenu', {
 			opacity: false,
+            duration: 150,
 			onActive: function(toggler, element){
 				toggler.addClass('current');
 				element.addClass('current');
@@ -120,22 +121,6 @@ window.addEvent('domready', function() {
 			}
 			else {
 				$('toggle-ajax').removeClass('visible').addClass('hidden');
-			}
-			e.stop(); //this makes sure that the user wont be sent to given url (or that the page refreshes when using dummy url like "#") if the clicked element was a link 
-		});
-	}
-
-	// Toggle Grid
-	if ($('toggle-grid')) {
-		var grid = new Fx.Slide('grid').hide(); //creates new Fx.Slide object from grid div
-		$('toggle-grid').addEvent('click', function(e) { //Adds an onClick event to toggle-grid div
-			e = new Event(e);
-				grid.toggle(); //toggles the div
-			if ($('toggle-grid').hasClass('hidden')){
-				$('toggle-grid').removeClass('hidden').addClass('visible');
-			}
-			else {
-				$('toggle-grid').removeClass('visible').addClass('hidden');
 			}
 			e.stop(); //this makes sure that the user wont be sent to given url (or that the page refreshes when using dummy url like "#") if the clicked element was a link 
 		});

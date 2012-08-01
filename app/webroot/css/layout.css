@@ -290,8 +290,8 @@ tfoot tr.total td {
 tfoot tr.total th {
 	text-transform:uppercase;
 }
-th.currency,
-td.currency {
+th.right,
+td.right {
 	text-align:right;
 }
 
