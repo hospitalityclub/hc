@@ -1,4 +1,3 @@
-
 <div class="grid_16">
     <h2 id="page-heading">Hospitality Club > Countries<span style="float: right;">Development Version 0.1</h2>
 </div>
@@ -8,9 +7,8 @@
     <?php echo $this->element('list'); ?>
 </div>
 <div class="grid_7">
-
     <table>
-      <?php foreach (array_chunk($countries, 3) as $group): ?>
+      <?php foreach (array_chunk($countries, 2) as $group): ?>
       <tr>
         <?php foreach ($group as $country): ?>
         <td><a href="<?php echo '/hc3/regions/country/'. $country['Country']['id']; ?>"><?php echo $country['Country']['name'] ?></a></td>
@@ -29,7 +27,3 @@
     <!-- Search box-->
     <?php echo $this->element('search'); ?>
 </div>
-
-
-
-
