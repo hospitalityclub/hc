@@ -1,5 +1,5 @@
 <div class="grid_16">
-    <h2 id="page-heading">Welcome to Hospitality Club!</h2>
+    <h2 id="page-heading">Welcome to Hospitality Club!<span style="float: right;">Development Version 0.1</h2>
 </div>
 <div class="clear"></div>
 <div class="grid_4">

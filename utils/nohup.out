@@ -1,0 +1,3 @@
+ERROR 1317 (70100) at line 1: Query execution was interrupted
+Query aborted by Ctrl+C
+ERROR 1064 (42000) at line 1: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'bestimes = "From 4pm to 6pm", publictrans = "Rickshaw, Bike, Tram", occupation =' at line 1
