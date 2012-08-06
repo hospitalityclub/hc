@@ -24,7 +24,7 @@
     <?php foreach (array_chunk($members, 2) as $group): ?>
     <tr>
       <?php foreach ($group as $member): ?>
-      <td><a href="<?php echo '/hc3/members/display/'. $member['Member']['id']; ?>"><?php echo $member['Member']['username'] ?></a></td>
+      <td><a href="<?php echo '/hc3/members/display/'. $member['Member']['id']; ?>"><?php echo $member['Member']['name'] ?></a></td>
       <?php endforeach; ?>
     </tr>
     <?php endforeach; ?>
