@@ -7,7 +7,7 @@
 
             <form class="form-inline" id="MemberLoginForm" method="post" action="/hc3/members/login" accept-charset="utf-8">
                 <input type="hidden" name="_method" value="POST" />
-                <input type="text" name="data[Member][username]" class="input-medium" placeholder="Email">
+                <input type="text" name="data[Member][username]" class="input-medium" placeholder="Username">
                 <input type="password" name="data[Member][password]" class="input-medium" placeholder="Password">
                 &nbsp;
                 <label class="checkbox"> <input type="checkbox" name="data[Member][remember]"> Remember me </label>

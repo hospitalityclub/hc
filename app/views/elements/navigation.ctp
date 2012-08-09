@@ -7,11 +7,10 @@
               <span class="icon-bar"></span>
             </a>
             <div class="nav-collapse">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li class=""><a href="#">Countries</a></li>
+<ul class="nav">
+
                 <li>    <a href="/hc3/members/logout/" title="Logout button">You're logged in as <?php echo $auth['Member']['username']; ?>. Logout?</a> </li>
-              </ul>
+</ul>
               <form class="navbar-search pull-left" action="">
                 <input class="search-query span2" placeholder="Search" type="text">
               </form>

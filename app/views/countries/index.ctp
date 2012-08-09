@@ -1,29 +1,37 @@
-<div class="grid_16">
-    <h2 id="page-heading">Hospitality Club > Countries<span style="float: right;">Development Version 0.1</h2>
-</div>
-<div class="clear"></div>
-<div class="grid_4">
-    <?php echo $this->element('menu'); ?>
-    <?php echo $this->element('list'); ?>
-</div>
-<div class="grid_7">
-    <table>
-      <?php foreach (array_chunk($countries, 2) as $group): ?>
-      <tr>
-        <?php foreach ($group as $country): ?>
-        <td><a href="<?php echo '/hc3/regions/country/'. $country['Country']['id']; ?>"><?php echo $country['Country']['name'] ?></a></td>
-        <td><?php echo $country['Country']['members'] ?> </td>
-        <?php endforeach; ?>
-      </tr>
-      <?php endforeach; ?>
-    </table>
+<?php echo
+    $this->element('subnav',
+        array(
+            'title' => 'Country Search',
+            'lead' => 'Use the search field below to search for accomodation in a particular country.'
+        )
+    );
+?>
 
-    <?php // echo $this->element('countries'); ?>
-    <?php // echo $this->element('profile'); ?>
+<div style="text-align: left">
+    <form class="well form-search">
+        <input type="text" class="input-big search-query">
+        <button type="submit" class="btn btn-primary">Search</button>
+        &nbsp;
+        <span style="float: right">
+            <input class="input-medium" placeholder="Email" type="text">
+            <input class="input-medium" placeholder="Password" type="password">
+            &nbsp;
+            <label class="checkbox"> <input type="checkbox"> Remember me </label>
+            &nbsp;
+            <button type="submit" class="btn btn-medium btn-success">Sign in!</button>
+            &nbsp;
+            <button type="submit" class="btn btn-medium btn-primary">Register »</button>
+        </span>
+    </form>
 </div>
-<div class="grid_5">
-    <!-- Login / Register box -->
-    <?php echo $this->element('login_register'); ?>
-    <!-- Search box-->
-    <?php echo $this->element('search'); ?>
-</div>
+
+<table style="width: 100%">
+  <?php foreach (array_chunk($countries, 3) as $group): ?>
+  <tr>
+    <?php foreach ($group as $country): ?>
+    <td><a href="<?php echo '/hc3/regions/country/'. $country['Country']['id']; ?>"><?php echo $country['Country']['name'] ?></a></td>
+    <td><?php echo $country['Country']['members'] ?> </td>
+    <?php endforeach; ?>
+  </tr>
+  <?php endforeach; ?>
+</table>

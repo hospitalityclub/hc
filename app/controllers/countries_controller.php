@@ -3,6 +3,7 @@ class CountriesController extends AppController {
 
   var $name = 'Countries';
   var $components = array('Auth', 'Session');
+  var $layout = 'login';
   var $paginate = array(
       'limit' => 2000, // amonaco: not sure if using pagination at all
       'order' => array(
