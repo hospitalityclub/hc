@@ -14,15 +14,18 @@
 
 
 <div class="span4"><h2>Recent Messages:</h2>
-        <div><a href="">Ariel Monaco &lt;arielmonaco&gt;</a><span style="float: right;">today 6pm</span></div>
-        <div><a href="">Ariel Monaco &lt;arielmonaco&gt;</a><span style="float: right;">today 6pm</span></div>
-        <div><a href="">Ariel Monaco &lt;arielmonaco&gt;</a><span style="float: right;">today 6pm</span></div>
-        <div><a href="">Ariel Monaco &lt;arielmonaco&gt;</a><span style="float: right;">today 6pm</span></div>
-        <div><a href="">Ariel Monaco &lt;arielmonaco&gt;</a><span style="float: right;">today 6pm</span></div>
-        <div><a href="">Ariel Monaco &lt;arielmonaco&gt;</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">Ariel Monaco&nbsp; - &nbsp; Hey bro, what's up?!...</a><span style="float: right;">today 6pm</span></div>
         <div><a href="">Rob Kramer &lt;nosomosdignos&gt;</a><span style="float: right;">20' ago</span></div>
         <div><a href="">Toss Julio &lt;trujillo&gt;</a><span style="float: right;">55' ago</span></div>
         <div><a href="">Katja Krauss &lt;kkrauss&gt;</a><span style="float: right;">30" ago</span></div>
+        <div><a href="">&nbsp;</a></div>
+        <div><a href="">Show all...</a></div>
     <p> </p>
     </div>
 
@@ -34,6 +37,8 @@
       <div><a href="">Ariel Monaco has sent you and another message.</a><span style="float: right;">today 6pm</span></div>
       <div><a href="">Ariel Monaco has sent you and another...</a><span style="float: right;">today 6pm</span></div>
       <div><a href="">Ariel Monaco has sent you and another...</a><span style="float: right;">today 6pm</span></div>
+        <div><a href="">&nbsp;</a></div>
+        <div><a href="">Show all...</a></div>
     </div>
 </div>
 

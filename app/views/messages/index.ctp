@@ -21,6 +21,7 @@
         <div><a href="">rkramer &lt;nosomosdignos@argentina.com&gt;</a><span style="float: right;">20' ago</span></div>
         <div><a href="">tjulio &lt;trujillo@hotmails.com&gt;</a><span style="float: right;">55' ago</span></div>
         <div><a href="">katjakrauss &lt;kkrauss@gmx.de&gt;</a><span style="float: right;">30" ago</span></div>
+        <div><a href="">Show all...</a></div>
     <p> </p>
     </div>
     <div class="span4"><h2>Messages:</h2>
