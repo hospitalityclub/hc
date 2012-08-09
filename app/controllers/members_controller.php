@@ -8,6 +8,7 @@ class MembersController extends AppController {
         // 'Member.id' => 'asc'
         )
     );
+    var $layout = 'login';
 
     // Auth settings
     function beforeFilter() {
@@ -57,8 +58,11 @@ class MembersController extends AppController {
         $this->set('members', $members);
     }
 
+    // repeated for testing
+
+
     // Displays the user profile
-    function display($id = null) {
+    function view($id = null) {
         if (!$id) {
             $this->Session->setFlash(__('Invalid member', true));
             $this->redirect(array('action' => 'index'));

@@ -2,6 +2,7 @@
 class MessagesController extends AppController {
 
 	var $name = 'Messages';
+    var $layout = 'login';
 
 	function index() {
 		$this->Message->recursive = 0;
